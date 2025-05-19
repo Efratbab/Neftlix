@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TrialActivities" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.TrialActivities" parent="Base.Theme.TrialActivities" />
+
+    <style name="ScreenBackground"><item name="android:background">@color/lightGrey</item></style>
+    <style name="MovieCardBackground"><item name="android:background">@color/darkGrey</item></style>
+    <style name="TextColor"><item name="android:textColor">@color/black</item></style>
+    <style name="ToolBarTextColor"><item name="android:textColor">@color/white</item></style>
+
+</resources>

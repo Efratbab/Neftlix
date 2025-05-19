@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">netflix_android</string>
+    <string name="sign_in_btn">Sign In</string>
+    <string name="sign_up_btn">Sign Up</string>
+    <string name="first_title">Unlimited movies, TV shows, and more</string>
+    <string name="logo">Logo</string>
+    <string name="category_btn_description">Category button</string>
+    <string name="categories_btn">Categories</string>
+    <string name="search_btn_description">Search button</string>
+    <string name="home_btn_description">Home button</string>
+    <string name="admin_editor_btn_description">Admin/Editor button</string>
+    <string name="home_button_description">Home Button</string>
+    <string name="play">play</string>
+    <string name="more_like_this">More Like This</string>
+    <string name="add_item">Add Item</string>
+    <string name="delete_item">Delete Item</string>
+    <string name="edit_item">Edit Item</string>
+    <string name="editing_mode">Editing Mode</string>
+    <string name="login_etUser">Username</string>
+    <string name="login_etPassword">Password</string>
+    <string name="login_btnLogin">Login</string>
+    <string name="LogInMsg">Log in into\n your EDY user.</string>
+    <string name="gotologin_btn">Go to Login</string>
+    <string name="DontHaveUserMsg">Don\'t have an EDY user yet?</string>
+    <string name="RegisterNowBtn">Register Now</string>
+    <string name="RegisterPageMsg">Create your EDY user\n to start your membership.</string>
+    <string name="RegisterBtn">Register</string>
+    <string name="DisplayNameStr">Enter your display name</string>
+    <string name="EnterUsernameStr">Enter your username</string>
+    <string name="EnterPasswordStr">Enter your password</string>
+    <string name="ConfirmPasswordStr">Confirm your password</string>
+    <string name="UploadPictureBtn">Upload profile picture</string>
+    <string name="logout_btn_description">logout button</string>
+    <string name="select_changes_admin"><u>Select the changes:</u></string>
+</resources>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".activities.AddMovieActivity">
+
+    <!-- Navbar -->
+    <LinearLayout
+        android:id="@+id/Navbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/darkGrey"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Logo -->
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="Logo"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_logo" />
+
+        <!-- Home Icon -->
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="0dp"
+            android:src="@drawable/ic_home"
+            android:scaleType="centerInside"
+            android:contentDescription="Home Button" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-medium"
+            android:text="Add Movie"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+
+        <!--logout button-->
+        <ImageButton
+            android:id="@+id/logoutButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="0dp"
+            android:src="@drawable/ic_logout"
+            android:scaleType="centerInside"
+            android:contentDescription="Logout Button" />
+    </LinearLayout>
+
+    <!-- Category Name -->
+    <TextView
+        android:id="@+id/movie_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Movie Name:"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/Navbar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/movieNameInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter movie name"
+        android:textColor="@color/white"
+        android:textColorHint="@color/lightGrey"
+        android:backgroundTint="@color/shinyRed"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/movie_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/pathToMovieLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Path To Movie:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/movieNameInput"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/add_movie_path_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter movie path"
+        android:textColor="@color/white"
+        android:textColorHint="@color/lightGrey"
+        android:backgroundTint="@color/shinyRed"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/pathToMovieLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:inputType="text"/>
+
+    <!-- Thumbnail Path-->
+    <TextView
+        android:id="@+id/pathToThumbnailMovieLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Path To Thumbnail Movie:"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/add_movie_path_input"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/add_thumbnail_path_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter movie path"
+        android:textColor="@color/white"
+        android:textColorHint="@color/lightGrey"
+        android:backgroundTint="@color/shinyRed"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/pathToThumbnailMovieLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:inputType="text"/>
+    <!-- Categories -->
+    <TextView
+        android:id="@+id/selectMoviesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Select Categories:"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/add_thumbnail_path_input"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ListView
+        android:id="@+id/categoriesListView"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/lightGrey"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_thumbnail_path_input">
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/selectedMoviesPlaceholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="No category selected"
+        android:textColor="@color/lightGrey"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/categoriesListView" />
+
+    <Button
+        android:id="@+id/confirmButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/shinyRed"
+        android:text="Confirm"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectedMoviesPlaceholder" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

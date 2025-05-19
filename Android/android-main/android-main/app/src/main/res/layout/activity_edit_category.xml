@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black"
+    tools:context=".activities.EditCategoryActivity">
+
+    <!-- Navbar -->
+    <LinearLayout
+        android:id="@+id/Navbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/darkGrey"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--Logo-->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="Logo"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_logo" />
+
+        <!-- Home Icon -->
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="0dp"
+            android:src="@drawable/ic_home"
+            android:scaleType="centerInside"
+            android:contentDescription="Home Button" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Edit Category"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium" />
+
+
+        <!--logout button-->
+        <ImageButton
+            android:id="@+id/logoutButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="0dp"
+            android:src="@drawable/ic_logout"
+            android:scaleType="centerInside"
+            android:contentDescription="Logout Button" />
+
+    </LinearLayout>
+
+    <!-- selectiong category -->
+    <TextView
+        android:id="@+id/selectCategoryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Category To Edit:"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/Navbar"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ListView
+        android:id="@+id/categoryListView"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:background="@color/lightGrey"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        app:layout_constraintTop_toBottomOf="@id/selectCategoryLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/selectedCategoryPlaceholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No movies selected"
+        android:textColor="@color/lightGrey"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/categoryListView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Select the changes-->
+    <TextView
+        android:id="@+id/changesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_changes_admin"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/selectedCategoryPlaceholder"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Name Change -->
+    <TextView
+        android:id="@+id/nameChangeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Category Name:"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/changesLabel"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <EditText
+        android:id="@+id/categoryNameInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter category name"
+        android:textColor="@color/white"
+        android:textColorHint="@color/lightGrey"
+        android:backgroundTint="@color/shinyRed"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/nameChangeLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="4dp"
+        android:inputType="text"/>
+
+    <!-- Add Movies-->
+    <TextView
+        android:id="@+id/addMoviesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Movies To Add:"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/categoryNameInput"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ListView
+        android:id="@+id/moviesListView"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:background="@color/lightGrey"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        app:layout_constraintTop_toBottomOf="@id/addMoviesLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/selectedMoviesPlaceholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No movies selected"
+        android:textColor="@color/lightGrey"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/moviesListView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!--Promoted Change-->
+    <TextView
+        android:id="@+id/promotedLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Promoted:"
+        android:textColor="@color/shinyRed"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/selectedMoviesPlaceholder"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp" />
+
+    <RadioGroup
+        android:id="@+id/promotedRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/promotedLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="32dp">
+
+        <RadioButton
+            android:id="@+id/radioYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/radioNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:textColor="@color/white"
+            android:layout_marginStart="16dp" />
+
+    </RadioGroup>
+    <!-- Confirm Button -->
+    <Button
+        android:id="@+id/confirmButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        android:backgroundTint="@color/shinyRed"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/promotedRadioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

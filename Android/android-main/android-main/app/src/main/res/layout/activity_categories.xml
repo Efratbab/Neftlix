@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/categories_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/ScreenBackground"
+    tools:context=".activities.CategoriesActivity">
+
+    <!-- Your other views go here -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Navbar (Toolbar) -->
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:elevation="4dp"
+            style="@style/ToolBarTextColor">
+
+            <!-- Logo -->
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="Logo"
+                android:layout_gravity="start"
+                android:src="@drawable/ic_logo" >
+
+            </ImageView>
+
+            <!-- Switch Theme Mode -->
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                android:thumb="@drawable/thumb"
+                app:track="@drawable/track"/>
+
+            <!-- Search Button -->
+            <ImageView
+                android:id="@+id/search_button"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_search"
+                android:contentDescription="@string/search_btn_description"
+                android:layout_gravity="end" >
+            </ImageView>
+            <!-- Move To HomePage Button-->
+            <ImageView
+                android:id="@+id/home_button"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="end"
+                android:contentDescription="@string/home_button_description"
+                android:src="@drawable/ic_home">
+
+            </ImageView>
+            <!--logout button-->
+            <ImageButton
+                android:id="@+id/logoutButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="16dp"
+                android:layout_gravity="end"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="0dp"
+                android:src="@drawable/ic_logout"
+                android:scaleType="centerInside"
+                android:contentDescription="Logout Button" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <VideoView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="8dp" />
+
+        <!-- Movies RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCategories"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
